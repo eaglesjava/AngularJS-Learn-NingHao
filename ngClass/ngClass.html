@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS--2、指令--动态应用 CSS 类：ngClass</title>
+		<script src="bower_components/angular/Angular.js"></script>
+		<script src="js/app.js"></script>
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/bootstrap.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="page-header">AngularJS</h1>
+			
+			<div ng-controller="ShowController">
+				<ul>
+					<li ng-repeat="show in shows" ng-class="{subscribe:show.subscribe}">
+						<input type="checkbox" ng-model="show.subscribe">{{show.title}}
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

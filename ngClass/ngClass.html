@@ -16,6 +16,12 @@
 				<ul>
 					<li ng-repeat="show in shows" ng-class="{subscribe:show.subscribe}">
 						<input type="checkbox" ng-model="show.subscribe">{{show.title}}
+						
+						<!--
+							动态显示或隐藏元素：ngShow ngHide
+						-->
+						<span class="glyphicon glyphicon-unchecked" ng-hide="show.subscribe"></span>
+						<span class="glyphicon glyphicon-check" ng-show="show.subscribe"></span>
 					</li>
 				</ul>
 			</div>
